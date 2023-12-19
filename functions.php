@@ -27,6 +27,10 @@ function randomise($length, $array)
 {
     $result = '';
     $count = count($array);
+    if ($count === 0) {
+
+        return "Seleziona almeno un tipo di carattere.";
+    }
     for ($i = 0; $i < $length; $i++) {
         $number = rand(0, $count - 1);
         $result .= $array[$number];

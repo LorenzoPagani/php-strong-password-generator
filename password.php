@@ -12,13 +12,21 @@
 
 
 <body>
-    <header></header>
+    <header class="text-center">
+        <h1>Password generator</h1>
+    </header>
     <main>
-        <h1>
-            <?php
-            echo randomise($passwordLength, $charactersArray);  ?>
+        <div class="container">
+            <div class="card p-5">
+                <h1>
+                    <?php
+                    echo randomise($passwordLength, $charactersArray);  ?>
 
-        </h1>
+                </h1>
+                <a href="http://localhost/php-strong-password-generator/form.php">torna alla selezione</a>
+            </div>
+        </div>
+
     </main>
     <footer></footer>
     <script src="main.js"></script>

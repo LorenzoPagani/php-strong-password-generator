@@ -15,16 +15,19 @@
     </header>
     <main>
         <div class="container">
-            <form class="form" action="password.php" method="GET">
-                <input class="form-control mb-3" name="numeri" min="1" type="number" required>
-                <label for="letters">Lettere</label>
-                <input type="checkbox" name="include_letters" id="letters" action="password.php" method="GET">
-                <label for="numbers">numeri</label>
-                <input type="checkbox" name="include_numbers" id="numbers" action="password.php" method="GET">
-                <label for="symbols">Simboli</label>
-                <input type="checkbox" name="include_symbols" id="symbols" action="password.php" method="GET">
-                <button class="btn btn-primary" type="submit">Genera password!</button>
-            </form>
+            <div class="card p-5">
+                <form class="form" action="password.php" method="GET">
+                    <input class="form-control mb-3" name="numeri" min="1" type="number" required placeholder="seleziona la lunghezza della password">
+                    <label for="letters">Lettere</label>
+                    <input type="checkbox" name="include_letters" id="letters" action="password.php" method="GET">
+                    <label for="numbers">numeri</label>
+                    <input type="checkbox" name="include_numbers" id="numbers" action="password.php" method="GET">
+                    <label for="symbols">Simboli</label>
+                    <input type="checkbox" name="include_symbols" id="symbols" action="password.php" method="GET">
+                    <button class="btn btn-primary" type="submit">Genera password!</button>
+                </form>
+            </div>
+
 
         </div>
     </main>
