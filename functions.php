@@ -8,7 +8,21 @@ $lettersArray = str_split($letters, 1);
 $capsLettersArray = str_split($capsLetters, 1);
 $numbersArray = str_split($numbers, 1);
 $symbolsArray = str_split($symbols, 1);
-$charactersArray = array_merge($lettersArray, $capsLettersArray, $numbersArray, $symbolsArray);
+$includeLetters = isset($_GET["include_letters"]);
+$includeNumbers = isset($_GET["include_numbers"]);
+$includeSymbols = isset($_GET["include_symbols"]);
+$charactersArray = [];
+if ($includeLetters) {
+    $charactersArray = array_merge($charactersArray, $lettersArray, $capsLettersArray);
+}
+
+if ($includeNumbers) {
+    $charactersArray = array_merge($charactersArray, $numbersArray);
+}
+
+if ($includeSymbols) {
+    $charactersArray = array_merge($charactersArray, $symbolsArray);
+}
 function randomise($length, $array)
 {
     $result = '';
